@@ -4,8 +4,8 @@ Rails.application.routes.draw do
    if Rails.env.production?
       root 'application#hello'
    end
-   if Rails.env.development?
-      root 'application#hello'
-   end
+#   if Rails.env.development?
+#      root 'application#hello'
+#   end
 
 end
