@@ -10,5 +10,26 @@
   <%= @user.email %>
 </p>
 
+<p>
+  <strong>ID:</strong>
+  <%= @user.id %>
+</p>
+
+<p>
+  <strong>posts:</strong>
+  <%= @user.microposts.all.ids%>
+</p>
+
+<p>
+  <strong>first post:</strong>
+  <%= @user.microposts.first.content%>
+</p>
+
+<p>
+  <strong>last post:</strong>
+  <%= @user.microposts.last.content%>
+</p>
+
+
 <%= link_to 'Edit', edit_user_path(@user) %> |
 <%= link_to 'Back', users_path %>

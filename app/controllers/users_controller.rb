@@ -10,6 +10,10 @@ class UsersController < ApplicationController
   # GET /users/1
   # GET /users/1.json
   def show
+    
+#    @microposts = Micropost.find(@user.id)
+#    format.html { redirect_to @user, notice: @microposts }
+#    format.json { render :show, status: :created, location: @user }
   end
 
   # GET /users/new
