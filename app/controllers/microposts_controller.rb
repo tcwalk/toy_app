@@ -10,6 +10,9 @@ class MicropostsController < ApplicationController
   # GET /microposts/1
   # GET /microposts/1.json
   def show
+    if @micropost.content == nil
+      @micropost = 'no post yet'
+    end
   end
 
   # GET /microposts/new
@@ -64,7 +67,7 @@ class MicropostsController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_micropost
-      @micropost = Micropost.find(params[:id])
+       @micropost = Micropost.find(params[:id])
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.

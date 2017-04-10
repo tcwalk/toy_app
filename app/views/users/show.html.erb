@@ -17,17 +17,25 @@
 
 <p>
   <strong>posts:</strong>
-  <%= @user.microposts.all.ids%>
+    <%= @user.microposts.all.ids%>
 </p>
 
 <p>
   <strong>first post:</strong>
-  <%= @user.microposts.first.content%>
+    <% if @user.microposts.all.ids.length > 0%>
+      <%= @user.microposts.first.content%>
+    <% else %>
+      <%= 'No posts yet'%>
+    <% end %>
 </p>
 
 <p>
   <strong>last post:</strong>
-  <%= @user.microposts.last.content%>
+    <% if @user.microposts.all.ids.length > 1%>
+      <%= @user.microposts.last.content%>
+    <% else %>
+      <%= 'No more posts'%>
+    <% end %>
 </p>
 
 
